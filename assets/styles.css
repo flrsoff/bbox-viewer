@@ -1,0 +1,117 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+/* Контейнер страницы */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Стили для надписи Folder name */
+.folder-name {
+    font-size: 18px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+.folder-name span:first-child {
+    font-weight: bold;
+}
+
+.choose {
+    margin-left: 10px;
+    color: #007bff;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* Подсветка при наведении */
+.choose:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Информация о файле */
+.file-info {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Название файла */
+.file-name {
+    font-size: 16px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Место для изображения */
+.image-container {
+    width: 1280px;
+    height: 720px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9e9e9;
+    border-radius: 5px;
+    border: 2px dashed #ccc;
+    min-height: 150px; /* Минимальная высота для области изображений */
+    padding: 10px;
+}
+
+.image {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Контейнер для кнопок */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Кнопка навигации */
+.nav-button {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* Стили для квадратных кнопок */
+.nav-button img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Подсветка кнопок при наведении */
+.nav-button:hover {
+    transform: scale(1.1);
+}
