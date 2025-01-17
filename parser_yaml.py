@@ -21,9 +21,9 @@ def parse_yaml_to_pairs(yaml_file):
     with open(yaml_file, "r") as file:
         config = yaml.safe_load(file)
 
-    base_rel_path = config['path']  # Базовый путь
-    images_path = config['images']  # Папки с изображениями
-    labels_path = config['labels']  # Папки с метками
+    base_rel_path = config['path']
+    images_path = config['images']
+    labels_path = config['labels']
 
     base_abs_path = os.path.join(os.path.dirname(yaml_file), base_rel_path)
     
