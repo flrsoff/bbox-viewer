@@ -5,23 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/index.css">
     <title>bbox viewer</title>
-    
 </head>
 <body>
     <div class="container">
         <div class="data-file-name">
-            <span>Data file name: </span>
-            <span class="choose">Choose</span>
+            <label>Data file name: </label>
+            <label class="choose">Choose</button>
+            <input type="file" id="file-input" name="file" accept=".yaml" style="display: none;">
         </div>
 
         <div class="img-file-info">
-            <span id = 'img-file-name-id' class="img-file-name">File name: example.jpg</span>
+            <label id = 'img-file-name-id' class="img-file-name">File name: example.jpg</span>
         </div>
 
         <div class="image-container">
             <img id="image" alt="Select a data file to display" class="image">
         </div>
-
 
         <div class="buttons-container">
             <button class="nav-button prev-button" onclick="loadImage('prev')">
@@ -32,10 +31,6 @@
             </button>
         </div>
     </div>
-    <!-- Скрытый input для выбора файла -->
-    <form id="file-form" action="/upload" method="post" enctype="multipart/form-data" style="display: none;">
-        <input type="file" id="file-input" name="file" accept=".yaml">
-    </form>
 
     <script src="static/script.js"></script>
 </body>

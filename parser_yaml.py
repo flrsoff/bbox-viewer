@@ -2,20 +2,20 @@ import yaml
 import os
 
 VALID_IMAGES_FORMATS = (
-    '.bmp' , # Microsoft BMP File Format
-    '.dng' , # Adobe DNG
-    '.jpeg', # JPEG
+    # '.bmp' , # Microsoft BMP File Format
+    # '.dng' , # Adobe DNG
+    # '.jpeg', # JPEG
     '.jpg' , # JPEG
-    '.mpo' , # Multi Picture Object
-    '.png' , # Portable Network Graphics
-    '.tif' , # Tag Image File Format
-    '.tiff', # Tag Image File Format
-    '.webp', # WebP
-    '.pfm' , # Portable FloatMap
-    '.HEIC', # High Efficiency Image Format
+    # '.mpo' , # Multi Picture Object
+    # '.png' , # Portable Network Graphics
+    # '.tif' , # Tag Image File Format
+    # '.tiff', # Tag Image File Format
+    # '.webp', # WebP
+    # '.pfm' , # Portable FloatMap
+    # '.HEIC', # High Efficiency Image Format
 )
 
-def parse_yaml_to_pairs(yaml_file):
+def parse_yaml_to_pairs(yaml_file, is_abs = False):
     if not os.path.isfile(yaml_file): return
     
     with open(yaml_file, "r") as file:
@@ -25,7 +25,8 @@ def parse_yaml_to_pairs(yaml_file):
     images_path = config['images']
     labels_path = config['labels']
 
-    base_abs_path = os.path.join(os.path.dirname(yaml_file), base_rel_path)
+    if is_abs: base_abs_path = base_rel_path
+    else     : base_abs_path = os.path.join(os.path.dirname(yaml_file), base_rel_path)
     
     images_abs_path = os.path.join(base_abs_path, images_path)
     labels_abs_path = os.path.join(base_abs_path, labels_path)
